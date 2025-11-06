@@ -56,7 +56,7 @@ LUCK Progress Bar – Increases when you win, decreases when you lose.
 - High FAITH increases your odds at the Casino.
 - High LUCK provides more resources to fuel FAITH.
 
-========================================== END BACKSTORY ========================================
+============== END BACKSTORY ================
 
 
 This repo focuses on the Casino side — provably-fair on-chain games powered by Arcium’s encrypted compute and RNG, with Anchor on Solana.
@@ -80,26 +80,31 @@ This repo focuses on the Casino side — provably-fair on-chain games powered by
 High-level flow for single-step games (slots, roulette, coinflip, dice):
 
 ```mermaid
-flowchart LR
-    A[Client (Wallet + dApp)] -->|queue_computation| B[Solana Program (Anchor + Arcium)]
-    B -->|Accounts + Args| C[Arcium Mempool]
-    C --> D[Arcium Execpool]
-    D --> E[Encrypted Circuits (ArcisRNG + Hidden Logic)]
-    E -->|Callback Output| F[Program Callback]
-    F -->|Update State + RTP + Transfer| G[Casino Vault]
-    F -->|Events| H[Client UI]
+flowchart TD
+    A[Client: Call Game Instruction] -->|1. spin_slots/roll_roulette/etc| B[Solana Program: queue_computation]
+    B -->|2. Arguments + Accounts| C[Arcium Mempool]
+    C -->|3. Queue Processing| D[Arcium Execpool]
+    D -->|4. Execute| E[Encrypted Circuits<br/>ArcisRNG + Game Logic]
+    E -->|5. Reveal Output Only| F[Program Callback]
+    F -->|6. Compute RTP Payout| G[Update State + Stats]
+    F -->|7. Transfer Tokens| H[Casino Vault → User]
+    F -->|8. Emit Event| I[Client: Receive Result]
 
-    subgraph On-chain (Solana)
-    B
-    F
-    G
+    subgraph OnChain["🔗 On-Chain (Solana)"]
+        B
+        F
+        G
+        H
     end
 
-    subgraph Off-chain (Arcium)
-    C
-    D
-    E
+    subgraph OffChain["🔐 Off-Chain (Arcium Encrypted)"]
+        C
+        D
+        E
     end
+
+    style OnChain fill:#e1f5ff
+    style OffChain fill:#fff4e1
 ```
 
 Multi-step flow (Blackjack):
