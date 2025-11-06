@@ -1,0 +1,1 @@
+export type RollRoulette = {"name":"roll_roulette","inputs":[{"content":[{"size_in_bits":128,"type":"u128"}],"type":"struct"}],"outputs":[{"size_in_bits":8,"type":"u8"}]}

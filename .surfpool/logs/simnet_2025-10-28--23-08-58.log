@@ -1,0 +1,36 @@
+[2025-10-28--23-08-58 INFO actix_server::builder] starting 5 workers
+[2025-10-28--23-08-58 INFO actix_server::server] Tokio runtime found; starting in existing Tokio runtime
+[2025-10-28--23-08-58 INFO actix_server::server] starting service: "actix-web-service-127.0.0.1:18488", workers: 5, listening on: 127.0.0.1:18488
+[2025-10-28--23-08-59 INFO parity_ws] Listening for new connections on 127.0.0.1:8900.
+[2025-10-28--23-09-01 INFO txtx::svm::deploy_program] [Recovery Instructions] - An ephemeral authority account will be created and funded to write to the buffer account.
+[2025-10-28--23-09-01 INFO txtx::svm::deploy_program] [Recovery Instructions] - Please save the following information in case the deployment fails and the account needs to be recovered:
+[2025-10-28--23-09-01 INFO txtx::svm::deploy_program] [Recovery Instructions] - Ephemeral authority public key: AwGSmypemYygoPjkuxf9dZhqFGmYpaK5EAdCNpRLDXaf
+[2025-10-28--23-09-01 INFO txtx::svm::deploy_program] [Recovery Instructions] - Ephemeral authority secret key: [82, 133, 77, 148, 24, 167, 178, 128, 137, 210, 143, 158, 185, 98, 31, 14, 49, 66, 177, 236, 109, 97, 132, 55, 186, 108, 139, 106, 247, 144, 242, 139, 147, 160, 2, 82, 139, 209, 61, 241, 22, 195, 244, 149, 13, 100, 59, 40, 165, 163, 211, 34, 4, 111, 169, 150, 72, 215, 168, 219, 226, 118, 76, 40]
+[2025-10-28--23-09-02 INFO txtx::svm::deploy_program] Account Created - Ephemeral authority account created and funded to write to buffer
+[2025-10-28--23-09-02 INFO txtx::svm::deploy_program] [Recovery Instructions] - Creating program buffer account at pubkey 4PgHpsDTpxzLwzrKJX6wdNQkkmmc9rWrYA8jaYDYXDR7
+[2025-10-28--23-09-02 INFO parity_ws::io] Accepted a new tcp connection from 127.0.0.1:51227.
+[2025-10-28--23-09-02 INFO txtx::svm::deploy_program] Account Created - Program buffer account created
+[2025-10-28--23-09-21 INFO txtx::svm::deploy_program] Buffer Ready - Writing to buffer account is complete
+[2025-10-28--23-09-22 ERROR txtx::svm::send_transaction] Failed - Failed to broadcast transaction
+[2025-10-28--23-09-22 ERROR txtx::svm::send_transaction] Failed - error: unable to send and confirm transaction (RPC response error -32002: Transaction simulation failed: Error processing Instruction 1: invalid account data for instruction: 7 log messages:
+Program 11111111111111111111111111111111 invoke [1]
+Program 11111111111111111111111111111111 success
+Program BPFLoaderUpgradeab1e11111111111111111111111 invoke [1]
+Program 11111111111111111111111111111111 invoke [2]
+Program 11111111111111111111111111111111 success
+Failed to parse ELF file: Section or symbol name `.bss._ZN4rand4rn` is longer than `16` bytes
+Program BPFLoaderUpgradeab1e11111111111111111111111 failed: invalid account data for instruction; 7 log messages:
+  Program 11111111111111111111111111111111 invoke [1]
+  Program 11111111111111111111111111111111 success
+  Program BPFLoaderUpgradeab1e11111111111111111111111 invoke [1]
+  Program 11111111111111111111111111111111 invoke [2]
+  Program 11111111111111111111111111111111 success
+  Failed to parse ELF file: Section or symbol name `.bss._ZN4rand4rn` is longer than `16` bytes
+  Program BPFLoaderUpgradeab1e11111111111111111111111 failed: invalid account data for instruction
+)
+[2025-10-28--23-13-44 INFO actix_server::worker] shutting down idle worker
+[2025-10-28--23-13-44 INFO actix_server::worker] shutting down idle worker
+[2025-10-28--23-13-44 INFO actix_server::accept] accept thread stopped
+[2025-10-28--23-13-44 INFO actix_server::worker] shutting down idle worker
+[2025-10-28--23-13-44 INFO actix_server::worker] shutting down idle worker
+[2025-10-28--23-13-44 INFO actix_server::worker] shutting down idle worker

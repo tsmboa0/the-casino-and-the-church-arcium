@@ -1,0 +1,1 @@
+{"name":"spin_slots","inputs":[{"content":[{"size_in_bits":128,"type":"u128"}],"type":"struct"}],"outputs":[{"content":[{"size_in_bits":8,"type":"u8"},{"size_in_bits":8,"type":"u8"},{"size_in_bits":8,"type":"u8"}],"type":"tuple"}]}
